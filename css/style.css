@@ -1,0 +1,201 @@
+/* page core */
+
+@import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
+
+body {
+	background-image:url("../images/back.png");
+	background-color: white;
+	background-repeat: repeat-x;
+	margin: 0 auto;
+    font-family: 'Quicksand', sans-serif;
+    color: #4a4a4a;
+	}
+	
+#wrap{
+      margin-left: auto ;
+      margin-right: auto ;
+      background-color: #F8F8F8;
+      max-width: 1000px;
+      min-height: 700px;
+ 
+}
+#title{
+    max-width: 1000px;
+    text-align: center;
+    padding-top: 30px;
+    height: auto;
+}
+
+
+#headerContent{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	height: 50px;
+	max-width: 1000px;
+	
+	
+}
+
+
+#options{
+    font-size:2em;
+	max-width: 850px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#logoHeader{
+	
+	margin-top: 5px;
+	max-width: 267px;
+	height: 50px;
+	float: left;
+	
+}
+div#core {
+	max-width: 1000px;
+	display: block;
+	clear: both;
+	margin: 0 auto;
+	padding-top: 50px;
+	text-align: center;
+}
+
+header{
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	background-image:url("../../images/headBack.png");
+	background-color: black;
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 55px;
+}
+
+/* clearfix */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+* html .clearfix {
+	height: 1%;
+}
+
+
+a {
+    text-decoration:none;
+    color:#ff9900;
+}
+#searchHeader{
+	
+	margin-top: 13px;
+	max-width: 267px;
+	height: 30px;
+	float:left;
+	margin-left: 60px;
+	
+}
+
+input[type=search] {
+max-width: 260px;
+padding: 5px;
+outline: none;
+border: 1px solid #999999;
+border-radius: 8px;
+font-size: 12px;
+}
+
+input[type=text] {
+max-width: 550px;
+width:100%;
+font-family: 'Quicksand', sans-serif;
+height:auto;
+padding: 5px;
+outline: none;
+border: 2px solid #999999;
+border-radius: 8px;
+font-size: 20px;
+}
+
+#buttonsHeader, #buttonsHeader a{
+	height: 50px;
+	float:left;
+	margin-left: 60px;
+    color:white;
+}
+
+.generate {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ff9900), color-stop(1, #ff9900));
+	background:-moz-linear-gradient(top, #ff9900 5%, #ff9900 100%);
+	background:-webkit-linear-gradient(top, #ff9900 5%, #ff9900 100%);
+	background:-o-linear-gradient(top, #ff9900 5%, #ff9900 100%);
+	background:-ms-linear-gradient(top, #ff9900 5%, #ff9900 100%);
+	background:linear-gradient(to bottom, #ff9900 5%, #ff9900 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9900', endColorstr='#ff9900',GradientType=0);
+	background-color:#ff9900;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:5px solid #ff9900;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+      font-family: 'Quicksand', sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	padding:4px 9px;
+	text-decoration: none;
+    
+    
+}
+.generate:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffaf36), color-stop(1, #ffaf36));
+	background:-moz-linear-gradient(top, #ffaf36 5%, #ffaf36 100%);
+	background:-webkit-linear-gradient(top, #ffaf36 5%, #ffaf36 100%);
+	background:-o-linear-gradient(top, #ffaf36 5%, #ffaf36 100%);
+	background:-ms-linear-gradient(top, #ffaf36 5%, #ffaf36 100%);
+	background:linear-gradient(to bottom, #ffaf36 5%, #ffaf36 100%);
+	background-color:#ffaf36;
+}
+.generate:active {
+	position:relative;
+	top:2px;
+}
+
+
+#mood {
+    display:none;
+}
+
+#LastFM {
+    display:none;
+}
+
+select {
+      border: 0 !important;  /*Removes border*/
+      -webkit-appearance: none;  /*Removes default chrome and safari style*/
+      -moz-appearance: none; /* Removes Default Firefox style*/
+      background-color: #dddddd;
+      background-position: 82px 7px;  /*Position of the background-image*/
+      max-width: 8em; /*Width of select dropdown to give space for arrow image*/
+      text-indent: 0.01px; /* Removes default arrow from firefox*/
+      text-overflow: "";  /*Removes default arrow from firefox*/
+
+      /*My custom style for fonts*/
+      color: #4a4a4a;
+      font-family: 'Quicksand', sans-serif;
+      font-size:1em;
+      padding-left:3px;
+}

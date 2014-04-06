@@ -1,0 +1,145 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>TroopBeat</title>
+  <meta name="description" content="Welcome to my basic template.">
+  <link rel="stylesheet" href="css/style.css?v=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="auth.js"></script>
+    <script src="playlist_updates.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+    <script>
+        $(document).ready(function(){
+            /*  script for fading in and out playlist options   */
+            $('#selector').change(function(){
+                if($(this).val()=="mood"){
+                    $('#LastFM').fadeOut('medium', function(){
+                        $('#mood').fadeIn('medium');
+                    });
+                }
+                else if($(this).val()=="history"){
+                    $('#mood').fadeOut('medium', function(){
+                        $('#LastFM').fadeIn('medium');
+                    });
+                }
+            });
+            $("#LastFM").submit(function() {
+                $("input, textarea").each(function() {
+                    $(this).val($(this).val().replace(/[^a-zA-Z0-9]+/g, '+'));
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+         <div id="wrap">
+        
+            <div id="core" class="clearfix">
+          
+		        <img width="213px" height="111px" src="logo.png"/>
+                <h1>TroopBeat</h1>
+                <div id="title">
+                    <h1>Create a new playlist</h1>
+                </div>
+            
+            <div id="options">
+                I want to listen to music based off 
+                    <select name="selector" id="selector">
+                        <option selected="selected" default disabled="disabled">(select)</option>
+                        <option value="history">play history</option>
+                        <option value="mood">mood</option>
+                    </select>
+                
+                        <form id="mood" name="input" action="playlist.php" method="get">
+                            and I'm feeling
+                            <select class="dropdown" name="mood">
+                                <option value="aggressive">aggressive</option>
+                                <option value="ambient">ambient</option>
+                                <option value="angry">angry</option>
+                                <option value="angst-ridden">angst-ridden</option>
+                                <option value="bouncy">bouncy</option>
+                                <option value="calming">calming</option>
+                                <option value="carefree">carefree</option>
+                                <option value="cheerful">cheerful</option>
+                                <option value="cold">cold</option>
+                                <option value="complex">complex</option>
+                                <option value="cool">cool</option>
+                                <option value="dark">dark</option>
+                                <option value="disturbing">disturbing</option>
+                                <option value="dramatic">dramatic</option>
+                                <option value="dreamy">dreamy</option>
+                                <option value="eerie">eerie</option>
+                                <option value="elegant">elegant</option>
+                                <option value="energetic">energetic</option>
+                                <option value="enthusiastic">enthusiastic</option>
+                                <option value="epic">epic</option>
+                                <option value="fun">fun</option>
+                                <option value="funky">funky</option>
+                                <option value="futuristic">futuristic</option>
+                                <option value="gentle">gentle</option>
+                                <option value="gleeful">gleeful</option>
+                                <option value="gloomy">gloomy</option>
+                                <option value="groovy">groovy</option>
+                                <option value="happy">happy</option>
+                                <option value="harsh">harsh</option>
+                                <option value="haunting">haunting</option>
+                                <option value="humorous">humorous</option>
+                                <option value="hypnotic">hypnotic</option>
+                                <option value="industrial">industrial</option>
+                                <option value="intense">intense</option>
+                                <option value="intimate">intimate</option>
+                                <option value="joyous">joyous</option>
+                                <option value="laid-back">laid-back</option>
+                                <option value="light">light</option>
+                                <option value="lively">lively</option>
+                                <option value="manic">manic</option>
+                                <option value="meditation">meditation</option>
+                                <option value="melancholia">melancholia</option>
+                                <option value="mellow">mellow</option>
+                                <option value="mystical">mystical</option>
+                                <option value="ominous">ominous</option>
+                                <option value="partymusic">partymusic</option>
+                                <option value="passionate">passionate</option>
+                                <option value="pastoral">pastoral</option>
+                                <option value="peaceful">peaceful</option>
+                                <option value="playful">playful</option>
+                                <option value="poignant">poignant</option>
+                                <option value="quiet">quiet</option>
+                                <option value="rebellious">rebellious</option>
+                                <option value="reflective">reflective</option>
+                                <option value="relax">relax</option>
+                                <option value="romantic">romantic</option>
+                                <option value="rowdy">rowdy</option>
+                                <option value="sad">sad</option>
+                                <option value="sentimental">sentimental</option>
+                                <option value="sexy">sexy</option>
+                                <option value="smooth">smooth</option>
+                                <option value="soothing">soothing</option>
+                                <option value="sophisticated">sophisticated</option>
+                                <option value="spacey">spacey</option>
+                                <option value="spiritual">spiritual</option>
+                                <option value="strange">strange</option>
+                                <option value="sweet">sweet</option>
+                                <option value="theater">theater</option>
+                                <option value="trippy">trippy</option>
+                                <option value="warm">warm</option>
+                            </select>
+                            <input type="submit" value="Generate Playlist" class="generate">
+                        </form>
+                    
+                    <form id="LastFM" name="input" action="playlist.php" method="get">
+                        <input type="text" name="user" placeholder="LastFm username(s)">
+                        <input type="submit" value="Generate Playlist" class="generate">
+                    </form>
+            </div>
+                <div id="login-container" class="pre-auth">
+                    This application requires access to your YouTube account. Please <a href="#" id="login-link">authorize</a> to continue.
+                 </div>
+            </div>
+         </div>
+                
+</body>
+</html>
