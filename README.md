@@ -1,7 +1,7 @@
 #Troopbeat - Playlist Creation Application
 Troopbeat is a web application which allows users to generate a YouTube playlist based off their current mood or their LastFM play history.
 
-A live demo can be seen at [ohjann.netsoc.ie/bbranch](http://ohjann.netsoc.ie/bbranch).
+A (broken) live demo can be seen at [ohjann.netsoc.ie/Troopbeat](http://ohjann.netsoc.ie/Troopbeat).
 
 ##How to set up
 
